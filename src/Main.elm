@@ -40,6 +40,7 @@ type alias State =
 
 -- UTILITY
 
+
 primaryColor : Float -> Float -> Color
 primaryColor hue alpha =
   hsla (degrees hue) 0.6 0.7 alpha
@@ -49,10 +50,10 @@ makeParticle : ( Float, Float ) -> Float -> Random.Seed -> ( Particle, Random.Se
 makeParticle ( x, y ) tick seed =
   let
     ( px, seed0 ) =
-      Random.generate (Random.float -10 10) seed
+      Random.generate (Random.float -16 16) seed
 
     ( py, seed1 ) =
-      Random.generate (Random.float -10 10) seed0
+      Random.generate (Random.float -12 12) seed0
 
     ( alpha, seed2 ) =
       Random.generate (Random.float 0.8 1) seed1
@@ -91,6 +92,7 @@ makeParticle ( x, y ) tick seed =
 
 
 -- MODEL
+
 
 init : State
 init =
