@@ -1,5 +1,9 @@
 module Main (..) where
 
+{-
+See at: http://codepen.io/toastal/pen/EKNJoP
+-}
+
 import Color exposing (Color, hsla)
 import Graphics.Collage exposing (Shape, collage, filled, move, ngon, rotate, scale)
 import Graphics.Element exposing (Element)
