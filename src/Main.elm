@@ -113,6 +113,8 @@ update ( ( w, h ), ( x, y ), tick ) state =
   let
     ( dx, dy ) =
       case ( x, y ) of
+        -- initially the mouse position is ( 0, 0 ) -- like when the mouse has yet
+        -- to interact with the canvas, in which case we want to center the particles
         ( 0, 0 ) ->
           ( 0, 0 )
 
